@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 300px;
+  background: white;
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto;
+}
+
+.center-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.viewer-container {
+  flex: 1;
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.bottom-panel {
+  height: 200px;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+}
+
+.upload-section {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.upload-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.upload-button:hover {
+  background: #2980b9;
+}
+
+.upload-button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.kpi-cards {
+  padding: 1rem;
+}
+
+.kpi-cards h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.kpi-card {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.kpi-title {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.kpi-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.issues-section {
+  padding: 1rem;
+}
+
+.issues-section h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.issue-item {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.issue-item:hover {
+  background: #f0f0f0;
+}
+
+.issue-error {
+  background: #ffebee;
+  border-left: 4px solid #f44336;
+}
+
+.issue-warning {
+  background: #fff3e0;
+  border-left: 4px solid #ff9800;
+}
+
+.issue-code {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.issue-message {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.timeline-controls {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.play-button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.play-button:hover {
+  background: #229954;
+}
+
+.play-button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.timeline-slider {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.time-display {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.simple-viewer {
+  padding: 2rem;
+  text-align: center;
+}
+
+.simple-viewer h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.trajectory-info {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.trajectory-info p {
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+}
+
+.chart-container {
+  padding: 1rem;
+}
+
+.chart-container h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.charts-grid {
+  display: flex;
+  gap: 2rem;
+  height: 120px;
+}
+
+.chart {
+  flex: 1;
+}
+
+.chart h4 {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.simple-chart {
+  position: relative;
+  height: 80px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.chart-point {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.error {
+  color: #e74c3c;
+  padding: 1rem;
+  background: #ffebee;
+  border-radius: 4px;
+  margin: 1rem;
+}
